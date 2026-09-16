@@ -1,4 +1,6 @@
 import React,{useRef} from 'react';
+import classes from './New.module.css';
+
                                      // if I not put any type  in () means this function not accept any parameter
 const NewTodo: React.FC<{ onAddTodo: (text: string) => void }> = (props) => {
                                      // () => void    means the function 
@@ -19,7 +21,7 @@ const NewTodo: React.FC<{ onAddTodo: (text: string) => void }> = (props) => {
     }
 
     return (
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} className={classes.form}>
             <label htmlFor="todo">Todo</label>
             <input type="text" id="todo" placeholder="New Todo" ref={todoInputRef}  />
             <button type="submit">Add Todo</button>

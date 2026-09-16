@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Todos from './components/Todos';
 import todo from './TypeDefinition/Todo';
 import NewTodo from './components/New';
+import classes from './App.module.css';
 
 function App() {
   const [todos, setTodos] = useState<todo[]>([]);
@@ -18,7 +19,7 @@ function App() {
     <div className="App">
       <NewTodo onAddTodo={addTodoHandler} />  
 
-      <h1>My Todos</h1>
+      <h1 className={classes.title}>My Todos</h1>
       <Todos items={todos} />
     </div>
 
